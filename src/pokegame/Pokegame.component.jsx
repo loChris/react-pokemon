@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Pokedex from '../pokedex/Pokedex.component';
 import POKEDEX_DATA from '../pokedex/Pokedex.data';
+import './Pokegame.styles.css';
 
 export default class Pokegame extends Component {
 	static defaultProps = {
@@ -27,10 +28,10 @@ export default class Pokegame extends Component {
 		);
 
 		return (
-			<div>
+			<div className="Pokegame">
 				<h1>Pokegame!</h1>
-				<Pokedex pokemon={hand1} exp={exp1} isWinnder={exp1 > exp2} />
-				<Pokedex pokemon={hand2} exp={exp2} isWinnder={exp1 < exp2} />
+				<Pokedex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2} />
+				<Pokedex pokemon={hand2} exp={exp2} isWinner={exp1 < exp2} />
 			</div>
 		);
 	}
